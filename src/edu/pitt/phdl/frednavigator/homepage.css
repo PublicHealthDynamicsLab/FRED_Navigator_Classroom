@@ -1,0 +1,46 @@
+
+/* If we want to do anything to the whole window, like add a bg image */
+.root { 
+  
+}
+
+.hyperlink {
+  -fx-underline: true;
+  -fx-text-fill: blue;
+}
+
+#title-text {
+  -fx-font-size: 48px;
+  -fx-font-family: "Helvetica";
+  -fx-fill: #222222;
+  /*-fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, .7), 6, 0.0, 0, 2);*/
+}
+
+#subtitle-text {
+  -fx-font-size: 32px;
+  -fx-font-family: "Helvetica";
+  -fx-fill: #222222;
+  /*-fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, .7), 6, 0.0, 0, 2);*/
+}
+
+#description {
+  -fx-font-size: 24px;
+  -fx-font-family: "Helvetica";
+  -fx-fill: #222222;
+}
+
+#acknowledgements {
+  -fx-font-size: 14px;
+  -fx-font-family: "Helvetica";
+  -fx-fill: #222222;
+}
+
+.background_pane{
+  -fx-background-image: url("resource/image/lblue042.jpg");
+  -fx-background-repeat: repeat repeat;   
+  -fx-background-position: center center;
+}
+
+.dropshadow {
+  -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}

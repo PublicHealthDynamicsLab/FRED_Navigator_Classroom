@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1150.0" xmlns:fx="http://javafx.com/fxml" fx:controller="edu.pitt.phdl.frednavigator.topic3.Topic3Controller">
+  <children>
+    <MenuBar id="tabInfo" minHeight="-Infinity" opacity="0.83" prefHeight="28.0" prefWidth="1200.0" AnchorPane.bottomAnchor="672.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem id="" mnemonicParsing="false" onAction="#startPage" text="Home Page" />
+            <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="Close" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+      <children>
+        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="672.0" prefWidth="150.0" styleClass="slider_pane">
+          <children>
+            <Button fx:id="btnStartPage" mnemonicParsing="false" onAction="#startPage" prefWidth="88.0" text="Home" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="26.0" />
+            <Button fx:id="btnPlayMovie" disable="true" mnemonicParsing="false" onAction="#openMovie" text="Play Movie" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="630.0" />
+            <Label fx:id="lblR0" disable="true" text="R0" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="60.0" />
+            <Label id="lblR0" fx:id="lblCaseCount" disable="true" text="Cases" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="60.0" />
+            <Slider fx:id="r0Slider" blockIncrement="0.1" disable="true" majorTickUnit="0.1" max="2.01" min="1.0" minorTickCount="0" orientation="VERTICAL" prefHeight="540.0" prefWidth="40.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.5" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="80.0" />
+            <Slider id="r0Slider" fx:id="caseCountSlider" blockIncrement="0.1" disable="true" majorTickUnit="2.0" max="20.01" minorTickCount="0" orientation="VERTICAL" pickOnBounds="true" prefHeight="250.0" prefWidth="40.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="80.0" />
+            <Slider fx:id="weekSlider" blockIncrement="0.1" disable="true" majorTickUnit="1.0" max="8.01" minorTickCount="0" orientation="VERTICAL" pickOnBounds="true" prefHeight="250.0" prefWidth="40.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="370.0" />
+            <Label id="lblR0" fx:id="lblWeek" disable="true" text="Weeks" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="350.0" />
+          </children>
+        </AnchorPane>
+        <TabPane id="tab-splash" fx:id="tabPaneTopic3" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+          <tabs>
+            <Tab id="tabInfo" fx:id="tabInfo" text="Info">
+              <content>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="info_tab_pane">
+                  <children>
+                    <HBox id="" alignment="CENTER" layoutX="827.0" layoutY="14.0" prefWidth="150.0" spacing="5.0" styleClass="info_image_border">
+                      <children>
+                        <ImageView fitHeight="117.73984207597637" fitWidth="140.0" pickOnBounds="true">
+                          <image>
+                            <Image url="@../resource/image/school_bus.png" preserveRatio="false" smooth="false" />
+                          </image>
+                          <HBox.margin>
+                            <Insets />
+                          </HBox.margin>
+                        </ImageView>
+                      </children>
+                    </HBox>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="867.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../resource/image/midas_logo_text.jpg" preserveRatio="false" smooth="false" />
+                      </image>
+                    </ImageView>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../resource/image/fredNav.png" preserveRatio="false" smooth="false" />
+                      </image>
+                    </ImageView>
+                    <Text id="headerTxt" layoutX="200.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info_header_text" text="Effects of School Closure" textAlignment="CENTER" wrappingWidth="600.0" />
+                    <Text layoutX="230.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info_standard_text" text="In this topic you will explore how epidemics might be affected by school closure.You can explore both the triggers for closing the school, and the duration of the closure." textAlignment="CENTER" wrappingWidth="540.0">
+                      <font>
+                        <Font name="Times New Roman Bold" size="36.0" />
+                      </font>
+                    </Text>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="tab-SEIR" fx:id="tabSEIR" closable="false" style="" text="Explore Health State">
+              <content>
+                <BorderPane fx:id="brdrPaneSEIR" styleClass="graph-tab-pane-text-region">
+                  <top>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                      <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Description:" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="3.0">
+                          <font>
+                            <Font name="Arial" size="22.0" fx:id="x1" />
+                          </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="On the curves below, we assume that everyone in the population is in one of four Health States: susceptible (S), exposed (E), infectious (I) or recovered (R)." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0">
+                          <font>
+                            <Font name="Arial" size="18.0" fx:id="x2" />
+                          </font>
+                        </Text>
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Explanation of sliders and buttons:" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="90.0" />
+                        <Text font="$x2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="Use the R0 slider to change the value of the basic reproductive rate (R0). Use the Cases slider to adjust the number of cases necessary to trigger closure. Use the Weeks slider to set how long the closure will last.  See what happens to the Health State curves as the values change. You can click on the 'Play Movie' button to see an animation of how the infection spreads in Allegheny County." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="117.0" />
+                      </children>
+                    </AnchorPane>
+                  </top>
+                </BorderPane>
+              </content>
+            </Tab>
+            <Tab id="tab-attack-rate" fx:id="tabAttackRate" closable="false" style="" text="Explore Attack Rate">
+              <content>
+                <BorderPane fx:id="brdrPaneAttackRate" styleClass="graph-tab-pane-text-region">
+                  <top>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                      <children>
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Description:" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="3.0" />
+                        <Text font="$x2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="The attack rate is the percentage of the population that becomes infected over the course of an epidemic.  The curves below show the overall attack rate, and the symptomatic attack rate (the proportion of the population who have symptoms)." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0" />
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Explanation of sliders and buttons:" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="90.0" />
+                        <Text font="$x2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="Use the R0 slider to change the value of the basic reproductive rate (R0). Use the Cases slider to adjust the number of cases necessary to trigger closure. Use the Weeks slider to set how long the closure will last.  See what happens to the Attack Rate curves as the values change. You can click on the 'Play Movie' button to see an animation of how the infection spreads in Allegheny County." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="117.0" />
+                      </children>
+                    </AnchorPane>
+                  </top>
+                </BorderPane>
+              </content>
+            </Tab>
+            <Tab id="tab-incidence" fx:id="tabIncidence" closable="false" style="" text="Explore Incidence">
+              <content>
+                <BorderPane fx:id="brdrPaneIncidence" styleClass="graph-tab-pane-text-region">
+                  <top>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                      <children>
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Description:" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="3.0" />
+                        <Text font="$x2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="The incidence is the number of new infections in the population in a given time period.  The curves below show the incidence per day, and the symptomatic incidence per day. The number of symptomatic cases per day is important because it may indicate how many people may go to the doctor or to the hospital at one time." wrappingWidth="780.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0" />
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Explanation of sliders and buttons:" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="90.0" />
+                        <Text font="$x2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="Use the R0 slider to change the value of the basic reproductive rate (R0). Use the Cases slider to adjust the number of cases necessary to trigger closure. Use the Weeks slider to set how long the closure will last.  See what happens to the Incidence curves as the values change. You can click on the 'Play Movie' button to see an animation of how the infection spreads in Allegheny County." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="117.0" />
+                      </children>
+                    </AnchorPane>
+                  </top>
+                </BorderPane>
+              </content>
+            </Tab>
+            <Tab id="tab-prevalence" fx:id="tabPrevalence" closable="false" style="" text="Explore Prevalence">
+              <content>
+                <BorderPane fx:id="brdrPanePrevalence" styleClass="graph-tab-pane-text-region">
+                  <top>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                      <children>
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Description:" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="3.0" />
+                        <Text id="" font="$x2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="The prevalence is the total number people in the population who are infected at a given time. The curve below shows the prevalence on each day of the epidemic.  The number of prevalance is important because it may determine how many infectious people you might encounter on any given day." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="30.0" />
+                        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Explanation of sliders and buttons:" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="90.0" />
+                        <Text font="$x2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="Use the R0 slider to change the value of the basic reproductive rate (R0). Use the Cases slider to adjust the number of cases necessary to trigger closure. Use the Weeks slider to set how long the closure will last.  See what happens to the Prevalence curve as the values change. You can click on the 'Play Movie' button to see an animation of how the infection spreads in Allegheny County." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="117.0" />
+                      </children>
+                    </AnchorPane>
+                  </top>
+                </BorderPane>
+              </content>
+            </Tab>
+            <Tab id="tab-predictions" fx:id="tabPrediction" closable="false" style="" text="Make Predictions">
+              <content>
+                <VBox fx:id="vBoxPrediction" prefHeight="200.0" prefWidth="100.0" styleClass="predictions_tab_pane">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                      <children>
+                        <HBox id="" alignment="CENTER" layoutX="761.0" layoutY="14.0" spacing="5.0" styleClass="info_image_border">
+                          <children>
+                            <ImageView blendMode="SRC_OVER" fitHeight="211.4698762661054" fitWidth="216.7333984375" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                <Image url="@../resource/image/AC.png" preserveRatio="false" smooth="false" />
+                              </image>
+                              <HBox.margin>
+                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" fx:id="x3" />
+                              </HBox.margin>
+                            </ImageView>
+                          </children>
+                        </HBox>
+                        <Text id="headerTxt" layoutX="33.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info_header_text" text="Now it's time to put your understanding of epidemics to work making some predictions." textAlignment="CENTER" wrappingWidth="700.0" />
+                        <Text layoutX="171.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info_subheader_text" text="Click on the button to see a question." textAlignment="CENTER" AnchorPane.topAnchor="286.0" />
+                      </children>
+                    </AnchorPane>
+                    <HBox fx:id="hBoxPredictionNext" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                      <children>
+                        <Button fx:id="btnPredictionNext" mnemonicParsing="false" onAction="#navigatePredictionsTab" styleClass="large_button" text="Begin" />
+                      </children>
+                    </HBox>
+                  </children>
+                </VBox>
+              </content>
+            </Tab>
+          </tabs>
+        </TabPane>
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@topic3.css" />
+  </stylesheets>
+</AnchorPane>

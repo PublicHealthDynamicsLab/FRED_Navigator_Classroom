@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+These are the questions that make up topic one
+They will be parsed in the FredNavigator Class and maintained as static
+They will be used on the Predictions tab for Topic1
+-->
+
+<ns1:quiz
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://fred.pitt.edu/fred_navigator'
+    xsi:schemaLocation='http://fred.pitt.edu/fred_navigator file:/Users/ddg5/FRED/FREDNavigatorClassroom/src/edu/pitt/phdl/frednavigator/resource/frednavigator_questions.xsd'>
+    <ns1:quizQuestion>
+        <ns1:imageFileName>topic1_q1.png</ns1:imageFileName>
+        <ns1:questionText>The red curve represents an incidence curve due to an epidemic with R0 = 1.5.</ns1:questionText>
+        <ns1:answerText> Which of the other curves might represents an epidemic at the same place with R0 = 2.0?
+            Why?</ns1:answerText>
+    </ns1:quizQuestion>
+    <ns1:quizQuestion>
+        <ns1:imageFileName>topic1_q2.png</ns1:imageFileName>
+        <ns1:questionText>The red curve represents an incidence curve due to an epidemic with R0 = 2.5.</ns1:questionText>
+        <ns1:answerText> Which of the other curves represents an epidemic with R0 = 1.5?
+            Why?</ns1:answerText>
+    </ns1:quizQuestion>
+    <ns1:quizQuestion>
+        <ns1:imageFileName>topic1_q3.png</ns1:imageFileName>
+        <ns1:questionText>The curve above represents the prevalence curve due to an epidemic with R0 = 1.6.</ns1:questionText>
+        <ns1:answerText> About how many weeks will the epidemic last?
+            How many days will more than 5000 people be infected?
+            Would an epidemic with R0 = 2.0 last longer than the epidemic shown, or shorter?
+            Why?</ns1:answerText>
+    </ns1:quizQuestion>
+    <ns1:quizQuestion>
+        <ns1:imageFileName>topic1_q4.png</ns1:imageFileName>
+        <ns1:questionText>The red curve above represents an attack rate curve due to an epidemic with R0 = 1.8.</ns1:questionText>
+        <ns1:answerText> Which of the other curves might represent an attack rate curve?
+            What values of R0 might be associated with the other attack rate curve?</ns1:answerText>
+    </ns1:quizQuestion>
+</ns1:quiz>

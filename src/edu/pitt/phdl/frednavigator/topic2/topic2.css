@@ -1,0 +1,160 @@
+/* 
+    Document   : topic2
+    Created on : Mar 11, 2013, 2:16:46 PM
+    Author     : ddg5
+    Description:
+        This stylesheet is used for topic2.fxml
+*/
+
+root { 
+  display: block;
+}
+
+.chart-series-line {    
+  -fx-stroke-width: 4px;
+  -fx-effect: null;
+}
+
+.chart {
+  -fx-padding: 10 120 10 50;
+}
+
+.chart-content {
+  -fx-padding: 5;    
+}
+ 
+.chart-title {
+  -fx-text-fill: #000000;
+  -fx-font-family: sans-serif;
+  -fx-font-size: 28px;
+  -fx-font-weight: bold;
+}
+
+.axis {
+  -fx-font-size: 1.4em;    
+  -fx-font-family: Tahoma;
+  -fx-tick-length: 20;
+  -fx-minor-tick-length: 10;
+}
+
+.axis-label {
+  -fx-text-fill: #000000;
+  -fx-font-family: sans-serif;
+  -fx-font-size: 24px;
+  -fx-font-weight: bold;
+}
+
+.slider_pane {
+  -fx-background-color: linear-gradient(to bottom right, #BBBBBB, #FFFFFF);
+}
+
+.info_tab_pane {
+  -fx-background-image: url("../resource/image/lblue042.jpg");
+  -fx-background-repeat: repeat repeat;   
+  -fx-background-position: center center;
+}
+
+.graph-tab-pane-header-text {
+  -fx-font-size: 18px;
+  -fx-font-family: sans-serif;
+  -fx-font-weight: bold;
+  -fx-fill: #2C5D98;
+}
+
+.graph-tab-pane-standard-text {
+  -fx-font-size: 16px;
+  -fx-font-family: sans-serif;
+  -fx-fill: #2C5D98;
+}
+
+.info_image_border {
+  -fx-border-color: #5A5A5A;
+  -fx-border-width: 3px;
+  -fx-border-style: solid;
+}
+
+.info_header_text {
+  -fx-font-size: 48px;
+  -fx-font-family: sans-serif;
+  -fx-fill: #222222;
+}
+
+.info_subheader_text {
+  -fx-font-size: 40px;
+  -fx-font-family: sans-serif;
+  -fx-fill: #222222;
+}
+
+.info_standard_text {
+  -fx-font-size: 24px;
+  -fx-font-family: sans-serif;
+  -fx-fill: #222222;
+}
+
+.predictions_question_text {
+  -fx-font-size: 18px;
+  -fx-font-family: sans-serif;
+  -fx-fill: #222222;
+}
+
+.predictions_answer_text {
+  -fx-font-size: 16px;
+  -fx-font-family: sans-serif;
+  -fx-fill: #222222;
+}
+
+.large_button {
+    -fx-font-size: 24px;
+}
+
+/* We can change these colors to whatever */
+.default-color0.chart-series-line { -fx-stroke: #0080FF; }
+.default-color1.chart-series-line { -fx-stroke: #FF0000; }
+.default-color2.chart-series-line { -fx-stroke: #00C000; }
+.default-color3.chart-series-line { -fx-stroke: #C000FF; }
+
+.default-color0.chart-line-symbol { 
+  -fx-background-color: #0080FF, white;
+  -fx-fill: #0080FF; 
+}
+
+.default-color1.chart-line-symbol { 
+  -fx-background-color: #FF0000, white;
+  -fx-fill: #FF0000; 
+}
+
+.default-color2.chart-line-symbol { 
+  -fx-background-color: #00C000, white;
+  -fx-fill: #00C000;
+}
+
+.default-color3.chart-line-symbol { 
+  -fx-background-color: #C000FF, white;
+  -fx-fill: #C000FF;
+}
+
+.baseline0.chart-series-line { 
+  -fx-stroke: #33B3FF; 
+  -fx-stroke-dash-array: 2 12 12 2;
+}
+.baseline1.chart-series-line { 
+  -fx-stroke: #FF3333; 
+  -fx-stroke-dash-array: 2 12 12 2;
+}
+
+.baseline0.chart-line-symbol { 
+  -fx-background-color: #33B3FF;
+  -fx-fill: #33B3FF;
+}
+.baseline1.chart-line-symbol { 
+  -fx-background-color: #FF3333;
+  -fx-fill: #FF3333;
+}
+
+.legend {
+  -fx-background-color: #CCCCCC;
+  -fx-border-width: 1;
+  -fx-border-color: #666666;
+  -fx-border-radius: 7;
+  -fx-background-radius: 7;
+}

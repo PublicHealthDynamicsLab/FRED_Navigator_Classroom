@@ -1,0 +1,136 @@
+<!DOCTYPE html
+	  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+      xml:lang="en-US">
+  <head>
+    <title>The FRED Simulator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"
+	  />
+  </head>
+  <body>
+    <font face="HelveticaNeue">
+      <table width='780' cellpadding='40' border=0><tr><td>
+
+<center><img src="fredNav.png" width=200></center>
+
+<p>
+
+<h3>
+<em>
+About the FRED Simulator
+</em>
+</h3>
+<p>
+FRED (A Framework for Reconstructing Epidemiological Dynamics) is a
+modeling system that supports research on the dynamics of infectious
+disease epidemics and the interacting effects of mitigation strategies,
+viral evolution, and personal health behavior. FRED was designed as a
+flexible, modular, open source framework for epidemic modeling, rather
+than a model of a particular infectious disease. Key features of FRED
+include:
+<p>
+<ul>
+<li>
+Highly modular, object-oriented software design to support rapid
+adaptation to a wide variety of infectious disease scenarios.
+</li>
+<p>
+<li>
+Realistic synthetic populations based on the US Census Bureau's Public
+Use Microdata (PUMs) data and Census aggregated data. The synthetic
+populations used by FRED were developed by RTI International as part of
+the MIDAS project and are freely available.
+</li>
+<p>
+<li>
+Scalable and efficient simulation of large epidemics. FRED can run on a
+variety of computer platforms from laptops to supercomputers, depending
+on the size of the population being simulated. Simulations of an
+influenza epidemic like the H1N1 pandemic in a population of 1 million
+people takes less than 2 minutes on a laptop computer.
+</li>
+<p>
+<li>
+Flexible ways to specify agent health behavior and decision
+rules. Agents in FRED may exhibit a number of health-related behaviors
+involving individual health decisions, such as staying home when sick,
+accepting a vaccine or taking an anti-viral drug. The FRED platform is
+designed to accommodate a range of models of health behavior and
+supports a variety of strategies to determine an agent's willingness to
+adopt a behavior.
+</li>
+</ul>
+<p>
+
+<h4>
+Synthetic Population
+</h4>
+<p>
+FRED explicitly represents every individual in a specific geographic
+region. Each agent has a set of socio-demographic characteristics and
+daily behaviors that include age, sex, employment status, occupation,
+and household location and membership in a set of social contact
+networks. Each household, school, and workplace is mapped to a specific
+geographic location, reflecting the actual spatial distribution of the
+area and the distance travelled by individuals to work or to school. For
+regions within the United States, FRED uses the 
+<a href="https://www.epimodels.org/midasdocs/SynthPop/2005-2009_synth_pop_ver2_quickstart_20120801.pdf">
+2005-2009 U.S. Synthetic
+Population Database (Version 2)</a>
+ from RTI International, a partner in the MIDAS Network.
+<p>
+The RTI Synthetic Population uses an iterative fitting method to
+generate an agent population from the US Census Bureau's Public Use
+Microdata files (PUMs) and aggregated data from the 2005-2009 American
+Community Survey (ACS) 5-year sample. The synthetic population database
+contains geographically located synthetic households and household
+residents for the United States, as well as group quarters locations and
+residents, schools and assignments of students to schools, workplaces
+and assignments of workers to workplaces. Each household, group
+quarters, school and workplace is mapped to a specific geographic
+location, reflecting the actual spatial distribution of the area and the
+distance travelled by individuals to work or to school. Each agent has
+associated demographic information (e.g., age, sex), locations for
+social activities (household, and possibly school or workplace).
+<p>
+A FRED synthetic population is currently available for every county in
+the United States and for selected international populations. FRED can
+simulate any combination of counties in a single run, for example, an
+epidemic within a state or a Metropolitan Statistical Area (MSA).
+
+<h4>Why FRED?</h4>
+<p>
+
+FRED was named in tribute to Fred McFeely Rogers (1928-2003), a famous
+Pittsburgher best known for his television program Mister Rogers'
+Neighborhood (1968-2001). Mr. Rogers' theme song included the phrases:
+<p>
+<em>
+It's a beautiful day in the neighborhood ... won't you be my neighbor?
+</em>
+<p>
+His emphasis of the importance of neighborhoods seems like an
+appropriate reflection of the importance of social networks in the FRED
+simulation system.
+<p>
+
+<h4>Funding</h4>
+<p>
+Support for this work is provided by the National Institute of General
+Medical Sciences under MIDAS grant 1U54GM088491-01 and by the Vaccine
+Modeling Initiative, funded by the Bill and Melinda Gates Foundation.
+
+
+<p>
+Click <a href="FRED_Tutorial.pdf">here</a> for more details about FRED.
+</p>
+
+<p>
+<hr>
+</p>
+
+
+    </td></tr></table></font>
+  </body>
+</html>

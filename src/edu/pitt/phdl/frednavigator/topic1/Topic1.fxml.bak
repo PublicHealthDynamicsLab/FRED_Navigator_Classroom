@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1150.0" xmlns:fx="http://javafx.com/fxml" fx:controller="edu.pitt.phdl.frednavigator.topic1.Topic1Controller">
+  <children>
+    <MenuBar id="tabInfo" minHeight="-Infinity" opacity="0.83" prefHeight="28.0" prefWidth="1150.0" AnchorPane.bottomAnchor="672.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem id="" mnemonicParsing="false" onAction="#startPage" text="Home Page" />
+            <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="Close" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="28.0">
+      <children>
+        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="150.0" styleClass="slider_pane">
+          <children>
+            <Slider fx:id="r0Slider" blockIncrement="0.1" disable="true" layoutX="49.0" majorTickUnit="0.1" max="3.01" min="1.0" minorTickCount="0" orientation="VERTICAL" prefHeight="540.0" prefWidth="40.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.5" AnchorPane.topAnchor="80.0" />
+            <Label fx:id="lblR0" disable="true" layoutX="62.0" text="R0" AnchorPane.topAnchor="60.0" />
+            <Button fx:id="btnStartPage" layoutX="31.0" mnemonicParsing="false" onAction="#startPage" prefWidth="88.0" text="Home" AnchorPane.topAnchor="26.0" />
+            <Button fx:id="btnPlayMovie" layoutX="31.0" mnemonicParsing="false" onAction="#openMovie" text="Play Movie" AnchorPane.topAnchor="630.0" />
+          </children>
+          <stylesheets>
+            <URL value="@topic1.css" />
+          </stylesheets>
+        </AnchorPane>
+        <TabPane fx:id="tabPaneTopic1" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+          <tabs>
+            <Tab id="tabInfo" fx:id="tabInfo" text="Info">
+              <content>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="info_tab_pane">
+                  <children>
+                    <HBox id="" alignment="CENTER" layoutX="856.0" layoutY="14.0" spacing="5.0" styleClass="info_image_border">
+                      <children>
+                        <ImageView blendMode="COLOR_BURN" fitHeight="118.46987915039062" fitWidth="121.41861348719013" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@../resource/image/flu_virus_cdc.jpg" preserveRatio="false" smooth="false" />
+                          </image>
+                          <HBox.margin>
+                            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                          </HBox.margin>
+                        </ImageView>
+                      </children>
+                    </HBox>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="867.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../resource/image/midas_logo_text.jpg" preserveRatio="false" smooth="false" />
+                      </image>
+                    </ImageView>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../resource/image/fredNav.png" preserveRatio="false" smooth="false" />
+                      </image>
+                    </ImageView>
+                    <Text id="headerTxt" layoutX="200.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info_header_text" text="Epidemic Dynamics" textAlignment="CENTER" wrappingWidth="600.0" />
+                    <Text layoutX="230.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info_standard_text" text="In this topic you will explore how quickly epidemics spread based on how many people are infected by each infected person." textAlignment="CENTER" wrappingWidth="540.0">
+                      <font>
+                        <Font name="Times New Roman Bold" size="36.0" />
+                      </font>
+                    </Text>
+                    <Text layoutX="202.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info_subheader_text" text="and the Reproductive Number R0" textAlignment="CENTER" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="tab-SEIR" fx:id="tabSEIR" closable="false" style="" text="Explore Health State">
+              <content>
+                <BorderPane fx:id="brdrPaneSEIR" prefHeight="200.0" prefWidth="200.0">
+                  <top>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                      <children>
+                        <Text layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Description:" AnchorPane.leftAnchor="120.0">
+                          <font>
+                            <Font name="Arial Bold" size="16.0" fx:id="x3" />
+                          </font>
+                        </Text>
+                        <Text layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="On the curves below, we assume that everyone in the population is in one of four Health States: susceptible (S), exposed (E), infectious (I) or recovered (R)." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0">
+                          <font>
+                            <Font name="Arial" size="16.0" fx:id="x4" />
+                          </font>
+                        </Text>
+                        <Text font="$x3" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Explanation of sliders and buttons:" AnchorPane.leftAnchor="120.0" />
+                        <Text font="$x4" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="Use the slider to change the value of the basic reproductive rate (R0). See what happens to the Health State curves as R0 changes. You can click on the 'Play Movie' button to see an animation of how the infection spreads in Allegheny County." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" />
+                      </children>
+                    </AnchorPane>
+                  </top>
+                </BorderPane>
+              </content>
+            </Tab>
+            <Tab id="tab-attack-rate" fx:id="tabAttackRate" closable="false" style="" text="Explore Attack Rate">
+              <content>
+                <BorderPane fx:id="brdrPaneAttackRate" styleClass="graph-tab-pane-text-region">
+                  <top>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                      <children>
+                        <Text layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Description:" AnchorPane.leftAnchor="120.0">
+                          <font>
+                            <Font name="Arial" size="22.0" fx:id="x1" />
+                          </font>
+                        </Text>
+                        <Text layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="The attack rate is the percentage of the population that becomes infected over the course of an epidemic.  The curves below show the overall attack rate, and the symptomatic attack rate (the proportion of the population who have symptoms)." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0">
+                          <font>
+                            <Font name="Arial" size="18.0" fx:id="x2" />
+                          </font>
+                        </Text>
+                        <Text font="$x1" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Explanation of sliders and buttons:" AnchorPane.leftAnchor="120.0" />
+                        <Text font="$x2" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="Use the slider to change the value of the basic reproductive rate (R0). See what happens to the Attack Rate curves as R0 changes. You can click on the 'Play Movie' button to see an animation of how the infection spreads in Allegheny County." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" />
+                      </children>
+                    </AnchorPane>
+                  </top>
+                </BorderPane>
+              </content>
+            </Tab>
+            <Tab id="tab-incidence" fx:id="tabIncidence" closable="false" style="" text="Explore Incidence">
+              <content>
+                <BorderPane fx:id="brdrPaneIncidence" styleClass="graph-tab-pane-text-region">
+                  <top>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                      <children>
+                        <Text font="$x1" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Description:" AnchorPane.leftAnchor="120.0" />
+                        <Text font="$x2" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="The incidence is the number of new infections in the population in a given time period.  The curves below show the incidence per day, and the symptomatic incidence per day. The number of symptomatic cases per day is important because it may indicate how many people may go to the doctor or to the hospital at one time." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" />
+                        <Text font="$x1" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Explanation of sliders and buttons:" AnchorPane.leftAnchor="120.0" />
+                        <Text font="$x2" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="Use the slider to change the value of the basic reproductive rate (R0). See what happens to the Incidence curves as R0 changes. You can click on the 'Play Movie' button to see an animation of how the infection spreads in Allegheny County." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" />
+                      </children>
+                    </AnchorPane>
+                  </top>
+                </BorderPane>
+              </content>
+            </Tab>
+            <Tab id="tab-prevalence" fx:id="tabPrevalence" closable="false" style="" text="Explore Prevalence">
+              <content>
+                <BorderPane fx:id="brdrPanePrevalence" styleClass="graph-tab-pane-text-region">
+                  <top>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                      <children>
+                        <Text font="$x1" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Description:" AnchorPane.leftAnchor="120.0" />
+                        <Text id="" font="$x2" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="The prevalence is the total number people in the population who are infected at a given time. The curve below shows the prevalence on each day of the epidemic.  The number of prevalance is important because it may determine how many infectious people you might encounter on any given day." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" />
+                        <Text font="$x1" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-header-text" text="Explanation of sliders and buttons:" AnchorPane.leftAnchor="120.0" />
+                        <Text font="$x2" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="graph-tab-pane-standard-text" text="Use the slider to change the value of the basic reproductive rate (R0). See what happens to the Prevalence curve as R0 changes. You can click on the 'Play Movie' button to see an animation of how the infection spreads in Allegheny County." wrappingWidth="760.0" AnchorPane.leftAnchor="120.0" />
+                      </children>
+                    </AnchorPane>
+                  </top>
+                </BorderPane>
+              </content>
+            </Tab>
+            <Tab id="tab-predictions" fx:id="tabPrediction" closable="false" style="" text="Make Predictions">
+              <content>
+                <VBox fx:id="vBoxPrediction" prefHeight="200.0" prefWidth="100.0" styleClass="predictions_tab_pane">
+                  <children>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                      <children>
+                        <HBox id="" alignment="CENTER" layoutX="761.0" layoutY="14.0" spacing="5.0" styleClass="info_image_border">
+                          <children>
+                            <ImageView blendMode="SRC_OVER" fitHeight="211.4698762661054" fitWidth="216.7333984375" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                <Image url="@../resource/image/AC.png" preserveRatio="false" smooth="false" />
+                              </image>
+                              <HBox.margin>
+                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                              </HBox.margin>
+                            </ImageView>
+                          </children>
+                        </HBox>
+                        <Text id="headerTxt" layoutX="33.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info_header_text" text="Now it's time to put your understanding of epidemics to work making some predictions." textAlignment="CENTER" wrappingWidth="700.0" />
+                        <Text layoutX="171.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info_subheader_text" text="Click on the button to see a question." textAlignment="CENTER" AnchorPane.topAnchor="286.0" />
+                      </children>
+                    </AnchorPane>
+                    <HBox fx:id="hBoxPredictionNext" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                      <children>
+                        <Button fx:id="btnPredictionNext" mnemonicParsing="false" onAction="#navigatePredictionsTab" styleClass="large_button" text="Begin" />
+                      </children>
+                    </HBox>
+                  </children>
+                </VBox>
+              </content>
+            </Tab>
+          </tabs>
+        </TabPane>
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@topic1.css" />
+  </stylesheets>
+</AnchorPane>

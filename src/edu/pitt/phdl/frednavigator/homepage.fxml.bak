@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<!-- Grid pane is root element
+fx:controller required for controller-based event handlers 
+xmlns:fx always required -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="1150.0" styleClass="background_pane" xmlns:fx="http://javafx.com/fxml" fx:controller="edu.pitt.phdl.frednavigator.HomepageController">
+  <children>
+    <ImageView fitHeight="158.32657327055708" fitWidth="156.95458984375" layoutX="482.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" rotate="28.0">
+      <image>
+        <Image url="@resource/icosagon-wht-372px.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="278.41255266198874" fitWidth="275.9999694824219" layoutX="113.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" rotate="352.0">
+      <image>
+        <Image url="@resource/icosagon-wht-372px.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="355.7832074510414" fitWidth="352.70018005371094" layoutX="706.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true" rotate="44.0">
+      <image>
+        <Image url="@resource/icosagon-wht-372px.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <Text id="acknowledgements" layoutX="300.0" layoutY="652.0" text="Brought to you by the" textAlignment="CENTER" wrappingWidth="550.0" />
+    <Text id="subtitle-text" layoutX="279.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flu Epidemics and Public Health in Action" />
+    <Text id="description" layoutX="180.0" layoutY="283.0" text="Use computer simulations to vary the conditions of an epidemic" textAlignment="CENTER" wrappingWidth="790.0" />
+    <HBox alignment="CENTER" layoutX="228.0" layoutY="347.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
+      <children>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="342.0" spacing="10.0" styleClass="dropshadow">
+          <children>
+            <Button onAction="#openTopic1Page" text="Topic 1 - Basic Epidemic Dynamics">
+              <font>
+                <Font name="System Bold" size="16.0" fx:id="x1" />
+              </font>
+            </Button>
+            <Button font="$x1" onAction="#openTopic2Page" prefWidth="316.0" text="Topic 2 - Effects of Vaccination" />
+            <Button font="$x1" onAction="#openTopic3Page" prefWidth="316.0" text="Topic 3 - Effects of School Closure" />
+          </children>
+        </VBox>
+        <VBox alignment="CENTER" prefWidth="342.0" spacing="10.0" styleClass="dropshadow">
+          <Button font="$x1" onAction="#openTutorialPage" prefWidth="316.0" text="Tutorial on Epidemics" />
+          <Button font="$x1" onAction="#openCareersPage" prefWidth="316.0" text="Careers in Public Health" />
+          <Button font="$x1" prefWidth="316.0" text="About the FRED Simulator" />
+        </VBox>
+      </children>
+    </HBox>
+    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1015.0" layoutY="536.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@resource/midas_logo_text.jpg" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="57.25412425792704" fitWidth="266.8923034667969" layoutX="12.0" layoutY="624.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@resource/PPH_Mark_Web-med.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="173.05208904266357" fitWidth="449.0" layoutX="351.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@resource/fredNav.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <Text id="description" layoutX="180.0" layoutY="307.0" text=" and see the effects of public health decisions." textAlignment="CENTER" wrappingWidth="790.0" />
+    <Text id="acknowledgements" layoutX="300.0" layoutY="669.0" text="Models of Infectious Disease Agent Study (MIDAS)" textAlignment="CENTER" wrappingWidth="550.0" />
+    <Text id="acknowledgements" layoutX="300.0" layoutY="683.0" text="at the University of Pittsburgh" textAlignment="CENTER" wrappingWidth="550.0" />
+  </children>
+  <stylesheets>
+    <URL value="@homepage.css" />
+  </stylesheets>
+</AnchorPane>
